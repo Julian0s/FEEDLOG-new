@@ -1,0 +1,179 @@
+{
+  "@@locale": "ko",
+
+  "appTitle": "FEEDLOG",
+  "confirmButton": "확인",
+  "loadingText": "로딩 중...",
+
+  "onboardingWelcomeMessage": "안녕하세요! 👋 FEEDLOG에 오신 것을 환영합니다! 저는 AI 영양 도우미이며, 건강 목표 달성을 도와드리게 되어 기쁩니다!\n\n최고의 지원을 제공할 수 있도록 프로필을 완성해 봅시다.|||뭐라고 불러드릴까요?",
+
+  "onboardingNameConfirmation": "만나서 반갑습니다, {name}님! 😊 이제 영양 프로필을 정확하게 계산하기 위해 생물학적 성별을 알아야 합니다.",
+
+  "onboardingGenderPrompt": "완벽해요, {name}님! 😊 영양 프로필을 정확하게 계산하기 위해 생물학적 성별을 알아야 합니다. WIDGET:gender_selector",
+
+  "onboardingAgePrompt": "좋아요! 이제 말씀해 주세요: 몇 살이신가요?",
+
+  "onboardingHeightPrompt": "완벽해요! 키는 얼마인가요? (미터 또는 센티미터로)",
+
+  "onboardingWeightPrompt": "알겠어요! 이제 말씀해 주세요: 현재 체중은 얼마인가요?",
+
+  "onboardingTargetWeightPrompt": "기록했어요! 목표 체중은 얼마인가요? (달성하고 싶은 체중)",
+
+  "onboardingActivityPrompt": "칼로리 소비량을 계산하기 위해 알아야 합니다: 일상적인 신체 활동 수준은 어떤가요?\n\nWIDGET:activity_selector",
+
+  "onboardingGoalPrompt": "좋아요! 마지막 질문: 주요 목표는 무엇인가요?\n\nWIDGET:goal_selector",
+
+  "onboardingResultsMessage": "🎉 프로필 완성, {name}님!\n\n영양 프로필을 계산했습니다:\n• TDEE: {tdee} kcal/일\n• 일일 목표: {dailyCalories} kcal\n• 단백질: {protein}g\n• 탄수화물: {carbs}g\n• 지방: {fat}g\n\n이제 FEEDLOG 사용법을 알려드릴게요!",
+
+  "onboardingTutorialMessage": "📱 FEEDLOG 사용법:\n\n1️⃣ **식사 기록**: 뭘 먹었는지 말씀해 주세요! 예: '달걀 2개와 바나나를 먹었어요'\n\n2️⃣ **진행 상황 확인**: '오늘 몇 칼로리 먹었어?' 또는 '오늘 어때?'라고 물어보세요\n\n3️⃣ **체중 업데이트**: '1kg 빠졌어' 또는 '80kg이야'라고 말씀하세요\n\n4️⃣ **음식 조회**: '사과는 몇 칼로리야?'라고 물어보세요\n\n모든 것이 자연스러운 대화로 작동합니다! 시작할 준비됐나요? 🚀",
+
+  "chatWelcomeBack": "돌아오셨네요! 오늘 뭘 드셨나요?",
+
+  "chatNameError": "죄송해요, 이름을 인식하지 못했어요. 뭐라고 불러드릴지 적어주시겠어요?",
+
+  "chatAgeConfirmation": "{age}세, 기록했어요! ✅",
+
+  "chatAgeError": "유효한 나이를 입력해 주세요 (예: 30).",
+
+  "chatHeightConfirmation": "{height}m, 좋아요! ✅",
+
+  "chatHeightError": "키를 이해하지 못했어요. '1.75' 또는 '175cm' 같이 입력해 보세요.",
+
+  "chatWeightConfirmation": "{weight}kg 기록됨! ✅",
+
+  "chatWeightError": "체중을 이해하지 못했어요. '80kg' 같이 입력해 보세요.",
+
+  "chatTargetWeightConfirmation": "목표 {weight}kg 설정됨! 💪",
+
+  "chatTargetWeightError": "목표 체중은 얼마인가요? 예: '70kg'.",
+
+  "chatSelectOptionAbove": "위에서 옵션을 선택해 주세요.",
+
+  "chatGenderConfirmation": "기록했어요! ✅",
+
+  "chatActivityConfirmation": "완벽해요! 💪",
+
+  "chatLogoutConfirmation": "알겠어요! 로그아웃 중... 다음에 봐요! 👋",
+
+  "chatProcessingError": "죄송해요, 메시지 처리 중 문제가 발생했어요. 다시 시도해 주세요.",
+
+  "chatImageAnalyzing": "이미지 분석 중... 📸",
+
+  "chatDailySummaryDefault": "오늘의 요약입니다:",
+
+  "chatInputPlaceholder": "메시지 입력...",
+
+  "loginTagline": "AI 영양 도우미",
+
+  "loginEmailPlaceholder": "이메일",
+
+  "loginPasswordPlaceholder": "비밀번호",
+
+  "loginEmailRequired": "이메일을 입력하세요",
+
+  "loginEmailInvalid": "유효하지 않은 이메일",
+
+  "loginPasswordRequired": "비밀번호를 입력하세요",
+
+  "loginPasswordLengthError": "비밀번호는 최소 6자 이상이어야 합니다",
+
+  "loginButton": "로그인",
+
+  "loginSignupLink": "계정이 없으신가요? 가입",
+
+  "signupTitle": "계정 만들기",
+
+  "signupSubtitle": "FEEDLOG 가입",
+
+  "signupConfirmPasswordPlaceholder": "비밀번호 확인",
+
+  "signupConfirmPasswordRequired": "비밀번호를 확인하세요",
+
+  "signupPasswordsMismatch": "비밀번호가 일치하지 않습니다",
+
+  "signupTermsAcceptance": "이용약관 및 개인정보 처리방침에 동의합니다",
+
+  "signupTermsRequired": "계속하려면 약관에 동의해야 합니다",
+
+  "signupButton": "계정 만들기",
+
+  "signupLoginLink": "이미 계정이 있으신가요? 로그인",
+
+  "loadingVerification": "로그인 확인 중...",
+
+  "genderSelectorTitle": "생물학적 성별 선택",
+
+  "genderMale": "남성",
+
+  "genderFemale": "여성",
+
+  "activitySelectorTitle": "신체 활동 수준",
+
+  "activitySedentary": "앉아있는",
+
+  "activitySedentaryDesc": "운동 거의 없음",
+
+  "activityLight": "가벼운",
+
+  "activityLightDesc": "주 1-3일 가벼운 운동",
+
+  "activityModerate": "보통",
+
+  "activityModerateDesc": "주 3-5일 보통 운동",
+
+  "activityHeavy": "격렬한",
+
+  "activityHeavyDesc": "주 6-7일 격렬한 운동",
+
+  "activityAthlete": "운동선수",
+
+  "activityAthleteDesc": "매우 격렬한 운동, 육체 노동",
+
+  "goalSelectorTitle": "주요 목표",
+
+  "goalLose": "체중 감량",
+
+  "goalLoseDesc": "하루 500kcal 칼로리 결손",
+
+  "goalMaintain": "체중 유지",
+
+  "goalMaintainDesc": "유지 식단",
+
+  "goalGain": "근육 증가",
+
+  "goalGainDesc": "하루 300kcal 칼로리 잉여",
+
+  "dailySummaryTitle": "일일 요약",
+
+  "dailySummaryCalories": "칼로리",
+
+  "dailySummaryProtein": "단백질",
+
+  "dailySummaryCarbs": "탄수화물",
+
+  "dailySummaryFat": "지방",
+
+  "dailySummaryLeft": "남음",
+
+  "dailySummaryKcal": "kcal",
+
+  "languageNotAvailable": "이 언어는 아직 FEEDLOG에서 사용할 수 없습니다.",
+
+  "languageAvailableOptions": "사용 가능한 언어",
+
+  "languageChangePrompt": "다른 언어를 선택하시겠어요?",
+
+  "languageChangeConfirm": "언어가 변경되었습니다! 🌍",
+
+  "languageNotSupported": "이 언어는 사용할 수 없습니다. 사용 가능한 언어: {languages}",
+
+  "languageChanged": "언어가 {language}로 변경되었습니다! 🌍 이제 이 언어로 응답하겠습니다.",
+
+  "languageSelectorTitle": "언어 선택",
+
+  "languageSelectorPrompt": "사용 가능한 언어입니다. 원하는 언어를 선택하세요:",
+
+  "onboardingLanguagePrompt": "환영합니다! 🌍 시작하기 전에 원하는 언어를 선택해 주세요:",
+
+  "onboardingLanguageTip": "💡 **팁:** '어떤 언어를 사용할 수 있나요?'라고 묻거나 '[언어]로 변경해 줘'라고 말하면 언제든지 언어를 변경할 수 있습니다."
+}

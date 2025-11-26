@@ -1,0 +1,179 @@
+{
+  "@@locale": "ja",
+
+  "appTitle": "FEEDLOG",
+  "confirmButton": "確認",
+  "loadingText": "読み込み中...",
+
+  "onboardingWelcomeMessage": "こんにちは！👋 FEEDLOGへようこそ！私はあなたのAI栄養アシスタントです。あなたの健康目標達成をお手伝いできることを嬉しく思います！\n\nプロフィールを完成させて、最高のサポートを提供できるようにしましょう。|||何とお呼びすればよいですか？",
+
+  "onboardingNameConfirmation": "はじめまして、{name}さん！😊 栄養プロフィールを正確に計算するために、生物学的性別を教えてください。",
+
+  "onboardingGenderPrompt": "完璧です、{name}さん！😊 栄養プロフィールを正確に計算するために、生物学的性別を知る必要があります。WIDGET:gender_selector",
+
+  "onboardingAgePrompt": "素晴らしい！何歳ですか？",
+
+  "onboardingHeightPrompt": "完璧！身長はどのくらいですか？（メートルまたはセンチメートルで）",
+
+  "onboardingWeightPrompt": "わかりました！現在の体重は何キロですか？",
+
+  "onboardingTargetWeightPrompt": "メモしました！目標体重は何キロですか？（達成したい体重）",
+
+  "onboardingActivityPrompt": "カロリー消費量を計算するために、日々の身体活動レベルを教えてください。\n\nWIDGET:activity_selector",
+
+  "onboardingGoalPrompt": "素晴らしい！最後の質問です：主な目標は何ですか？\n\nWIDGET:goal_selector",
+
+  "onboardingResultsMessage": "🎉 プロフィール完成、{name}さん！\n\n栄養プロフィールを計算しました：\n• TDEE：{tdee} kcal/日\n• 日々の目標：{dailyCalories} kcal\n• タンパク質：{protein}g\n• 炭水化物：{carbs}g\n• 脂質：{fat}g\n\nFEEDLOGの使い方をお教えします！",
+
+  "onboardingTutorialMessage": "📱 FEEDLOGの使い方：\n\n1️⃣ **食事を記録**：食べたものを教えてください！例：「卵2個とバナナを食べました」\n\n2️⃣ **進捗を確認**：「今日何カロリー食べた？」や「今日はどう？」と聞いてください\n\n3️⃣ **体重を更新**：「1kg減った」や「80kgです」と言ってください\n\n4️⃣ **食品を調べる**：「りんごは何カロリー？」と聞いてください\n\n自然な会話ですべてが機能します！始める準備はできましたか？🚀",
+
+  "chatWelcomeBack": "おかえりなさい！今日は何を食べましたか？",
+
+  "chatNameError": "すみません、お名前を認識できませんでした。どう呼ばれたいか教えていただけますか？",
+
+  "chatAgeConfirmation": "{age}歳、メモしました！✅",
+
+  "chatAgeError": "有効な年齢を入力してください（例：30）。",
+
+  "chatHeightConfirmation": "{height}m、素晴らしい！✅",
+
+  "chatHeightError": "身長がわかりませんでした。「1.75」や「175cm」のように入力してみてください。",
+
+  "chatWeightConfirmation": "{weight}kg記録しました！✅",
+
+  "chatWeightError": "体重がわかりませんでした。「80kg」のように入力してみてください。",
+
+  "chatTargetWeightConfirmation": "目標{weight}kg設定しました！💪",
+
+  "chatTargetWeightError": "目標体重は何kgですか？例：「70kg」",
+
+  "chatSelectOptionAbove": "上のオプションから選択してください。",
+
+  "chatGenderConfirmation": "メモしました！✅",
+
+  "chatActivityConfirmation": "完璧！💪",
+
+  "chatLogoutConfirmation": "わかりました！ログアウト中... またね！👋",
+
+  "chatProcessingError": "すみません、メッセージの処理中に問題が発生しました。もう一度お試しください。",
+
+  "chatImageAnalyzing": "画像を分析中... 📸",
+
+  "chatDailySummaryDefault": "本日のまとめです：",
+
+  "chatInputPlaceholder": "メッセージを入力...",
+
+  "loginTagline": "あなたのAI栄養アシスタント",
+
+  "loginEmailPlaceholder": "メール",
+
+  "loginPasswordPlaceholder": "パスワード",
+
+  "loginEmailRequired": "メールを入力してください",
+
+  "loginEmailInvalid": "無効なメール",
+
+  "loginPasswordRequired": "パスワードを入力してください",
+
+  "loginPasswordLengthError": "パスワードは6文字以上必要です",
+
+  "loginButton": "ログイン",
+
+  "loginSignupLink": "アカウントをお持ちでないですか？登録",
+
+  "signupTitle": "アカウント作成",
+
+  "signupSubtitle": "FEEDLOGに参加",
+
+  "signupConfirmPasswordPlaceholder": "パスワード確認",
+
+  "signupConfirmPasswordRequired": "パスワードを確認してください",
+
+  "signupPasswordsMismatch": "パスワードが一致しません",
+
+  "signupTermsAcceptance": "利用規約とプライバシーポリシーに同意します",
+
+  "signupTermsRequired": "続行するには利用規約に同意する必要があります",
+
+  "signupButton": "アカウント作成",
+
+  "signupLoginLink": "すでにアカウントをお持ちですか？ログイン",
+
+  "loadingVerification": "ログインを確認中...",
+
+  "genderSelectorTitle": "生物学的性別を選択",
+
+  "genderMale": "男性",
+
+  "genderFemale": "女性",
+
+  "activitySelectorTitle": "身体活動レベル",
+
+  "activitySedentary": "座りがち",
+
+  "activitySedentaryDesc": "運動はほとんどなし",
+
+  "activityLight": "軽度",
+
+  "activityLightDesc": "週1-3日の軽い運動",
+
+  "activityModerate": "中程度",
+
+  "activityModerateDesc": "週3-5日の中程度の運動",
+
+  "activityHeavy": "激しい",
+
+  "activityHeavyDesc": "週6-7日の激しい運動",
+
+  "activityAthlete": "アスリート",
+
+  "activityAthleteDesc": "非常に激しい運動、肉体労働",
+
+  "goalSelectorTitle": "主な目標",
+
+  "goalLose": "減量",
+
+  "goalLoseDesc": "1日500kcalのカロリー不足",
+
+  "goalMaintain": "体重維持",
+
+  "goalMaintainDesc": "維持食",
+
+  "goalGain": "筋肉増量",
+
+  "goalGainDesc": "1日300kcalのカロリー過剰",
+
+  "dailySummaryTitle": "本日のまとめ",
+
+  "dailySummaryCalories": "カロリー",
+
+  "dailySummaryProtein": "タンパク質",
+
+  "dailySummaryCarbs": "炭水化物",
+
+  "dailySummaryFat": "脂質",
+
+  "dailySummaryLeft": "残り",
+
+  "dailySummaryKcal": "kcal",
+
+  "languageNotAvailable": "この言語はFEEDLOGではまだ利用できません。",
+
+  "languageAvailableOptions": "利用可能な言語",
+
+  "languageChangePrompt": "他の言語を選びますか？",
+
+  "languageChangeConfirm": "言語を変更しました！🌍",
+
+  "languageNotSupported": "この言語は利用できません。利用可能な言語：{languages}",
+
+  "languageChanged": "言語を{language}に変更しました！🌍 これからはこの言語で返信します。",
+
+  "languageSelectorTitle": "言語を選択",
+
+  "languageSelectorPrompt": "利用可能な言語はこちらです。お好みの言語を選択してください：",
+
+  "onboardingLanguagePrompt": "ようこそ！🌍 始める前に、お好みの言語を選択してください：",
+
+  "onboardingLanguageTip": "💡 **ヒント：** 「どの言語が使えますか？」と聞くか、「[言語]に変更して」と言うことで、いつでも言語を変更できます。"
+}

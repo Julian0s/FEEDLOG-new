@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994673302818",
+    "project_id": "feedlog-c44af",
+    "storage_bucket": "feedlog-c44af.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994673302818:android:d03710b6081e206de1997b",
+        "android_client_info": {
+          "package_name": "com.nutriai.nutriai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfAgLgJtifbPYpB61egbKp241tg_y_1Fk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

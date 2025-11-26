@@ -1,0 +1,179 @@
+{
+  "@@locale": "it",
+
+  "appTitle": "FEEDLOG",
+  "confirmButton": "Conferma",
+  "loadingText": "Caricamento...",
+
+  "onboardingWelcomeMessage": "Ciao! 👋 Benvenuto su FEEDLOG! Sono il tuo assistente nutrizionale con intelligenza artificiale, e sono entusiasta di aiutarti a raggiungere i tuoi obiettivi di salute!\n\nOra completiamo il tuo profilo così posso offrirti il miglior supporto possibile.|||Come vorresti essere chiamato?",
+
+  "onboardingNameConfirmation": "Piacere di conoscerti, {name}! 😊 Ora ho bisogno di sapere il tuo sesso biologico per calcolare il tuo profilo nutrizionale con precisione.",
+
+  "onboardingGenderPrompt": "Perfetto, {name}! 😊 Per calcolare il tuo profilo nutrizionale con precisione, ho bisogno di sapere il tuo sesso biologico. WIDGET:gender_selector",
+
+  "onboardingAgePrompt": "Ottimo! Ora dimmi: quanti anni hai?",
+
+  "onboardingHeightPrompt": "Perfetto! E qual è la tua altezza? (in metri o centimetri)",
+
+  "onboardingWeightPrompt": "Capito! Ora dimmi: qual è il tuo peso attuale?",
+
+  "onboardingTargetWeightPrompt": "Annotato! E qual è il tuo peso obiettivo? (il peso che vuoi raggiungere)",
+
+  "onboardingActivityPrompt": "Per calcolare il tuo dispendio calorico, ho bisogno di sapere: qual è il tuo livello di attività fisica quotidiano?\n\nWIDGET:activity_selector",
+
+  "onboardingGoalPrompt": "Ottimo! Ultima domanda: qual è il tuo obiettivo principale?\n\nWIDGET:goal_selector",
+
+  "onboardingResultsMessage": "🎉 Profilo completo, {name}!\n\nHo calcolato il tuo profilo nutrizionale:\n• TDEE: {tdee} kcal/giorno\n• Obiettivo giornaliero: {dailyCalories} kcal\n• Proteine: {protein}g\n• Carboidrati: {carbs}g\n• Grassi: {fat}g\n\nOra ti mostro come usare FEEDLOG!",
+
+  "onboardingTutorialMessage": "📱 Come funziona FEEDLOG:\n\n1️⃣ **Registrare pasti**: Dimmi semplicemente cosa hai mangiato! Esempio: 'Ho mangiato 2 uova e una banana'\n\n2️⃣ **Vedere i progressi**: Chiedi 'Quante calorie ho mangiato oggi?' o 'Come va la mia giornata?'\n\n3️⃣ **Aggiornare peso**: Di' 'Ho perso 1kg' o 'Peso 80kg'\n\n4️⃣ **Consultare alimenti**: Chiedi 'Quante calorie ha una mela?'\n\nTutto funziona chattando naturalmente con me! Pronti a iniziare? 🚀",
+
+  "chatWelcomeBack": "Bentornato! Cosa hai mangiato oggi?",
+
+  "chatNameError": "Scusa, non sono riuscito a identificare il tuo nome. Potresti scrivere semplicemente come vuoi essere chiamato?",
+
+  "chatAgeConfirmation": "{age} anni, annotato! ✅",
+
+  "chatAgeError": "Per favore, inserisci un'età valida (es: 30).",
+
+  "chatHeightConfirmation": "{height}m di altezza, ottimo! ✅",
+
+  "chatHeightError": "Non ho capito l'altezza. Prova qualcosa come '1.75' o '175cm'.",
+
+  "chatWeightConfirmation": "{weight}kg registrato! ✅",
+
+  "chatWeightError": "Non ho capito il peso. Prova qualcosa come '80kg'.",
+
+  "chatTargetWeightConfirmation": "Obiettivo di {weight}kg impostato! 💪",
+
+  "chatTargetWeightError": "Qual è il tuo peso obiettivo? Es: '70kg'.",
+
+  "chatSelectOptionAbove": "Per favore, seleziona un'opzione sopra.",
+
+  "chatGenderConfirmation": "Annotato! ✅",
+
+  "chatActivityConfirmation": "Perfetto! 💪",
+
+  "chatLogoutConfirmation": "Capito! Disconnessione in corso... A presto! 👋",
+
+  "chatProcessingError": "Scusa, ho avuto un problema nell'elaborare il tuo messaggio. Riprova.",
+
+  "chatImageAnalyzing": "Analizzando la tua immagine... 📸",
+
+  "chatDailySummaryDefault": "Ecco il tuo riepilogo giornaliero:",
+
+  "chatInputPlaceholder": "Scrivi il tuo messaggio...",
+
+  "loginTagline": "Il tuo assistente nutrizionale IA",
+
+  "loginEmailPlaceholder": "Email",
+
+  "loginPasswordPlaceholder": "Password",
+
+  "loginEmailRequired": "Inserisci la tua email",
+
+  "loginEmailInvalid": "Email non valida",
+
+  "loginPasswordRequired": "Inserisci la tua password",
+
+  "loginPasswordLengthError": "La password deve avere almeno 6 caratteri",
+
+  "loginButton": "Accedi",
+
+  "loginSignupLink": "Non hai un account? Registrati",
+
+  "signupTitle": "Crea Account",
+
+  "signupSubtitle": "Unisciti a FEEDLOG",
+
+  "signupConfirmPasswordPlaceholder": "Conferma Password",
+
+  "signupConfirmPasswordRequired": "Conferma la tua password",
+
+  "signupPasswordsMismatch": "Le password non corrispondono",
+
+  "signupTermsAcceptance": "Accetto i termini d'uso e la privacy policy",
+
+  "signupTermsRequired": "Devi accettare i termini per continuare",
+
+  "signupButton": "Crea Account",
+
+  "signupLoginLink": "Hai già un account? Accedi",
+
+  "loadingVerification": "Verifica accesso...",
+
+  "genderSelectorTitle": "Seleziona il Tuo Sesso Biologico",
+
+  "genderMale": "Maschile",
+
+  "genderFemale": "Femminile",
+
+  "activitySelectorTitle": "Livello di Attività Fisica",
+
+  "activitySedentary": "Sedentario",
+
+  "activitySedentaryDesc": "Poco o nessun esercizio",
+
+  "activityLight": "Leggero",
+
+  "activityLightDesc": "Esercizio leggero 1-3 giorni/settimana",
+
+  "activityModerate": "Moderato",
+
+  "activityModerateDesc": "Esercizio moderato 3-5 giorni/settimana",
+
+  "activityHeavy": "Intenso",
+
+  "activityHeavyDesc": "Esercizio intenso 6-7 giorni/settimana",
+
+  "activityAthlete": "Atleta",
+
+  "activityAthleteDesc": "Esercizio molto intenso, lavoro fisico",
+
+  "goalSelectorTitle": "Il Tuo Obiettivo Principale",
+
+  "goalLose": "Perdere Peso",
+
+  "goalLoseDesc": "Deficit calorico di 500 kcal/giorno",
+
+  "goalMaintain": "Mantenere Peso",
+
+  "goalMaintainDesc": "Dieta di mantenimento",
+
+  "goalGain": "Aumentare Massa",
+
+  "goalGainDesc": "Surplus calorico di 300 kcal/giorno",
+
+  "dailySummaryTitle": "Riepilogo Giornaliero",
+
+  "dailySummaryCalories": "Calorie",
+
+  "dailySummaryProtein": "Proteine",
+
+  "dailySummaryCarbs": "Carboidrati",
+
+  "dailySummaryFat": "Grassi",
+
+  "dailySummaryLeft": "Rimanenti",
+
+  "dailySummaryKcal": "kcal",
+
+  "languageNotAvailable": "Questa lingua non è ancora disponibile in FEEDLOG.",
+
+  "languageAvailableOptions": "Lingue disponibili",
+
+  "languageChangePrompt": "Vorresti scegliere una lingua diversa?",
+
+  "languageChangeConfirm": "Lingua cambiata con successo! 🌍",
+
+  "languageNotSupported": "Questa lingua non è disponibile. Lingue disponibili: {languages}",
+
+  "languageChanged": "Lingua cambiata in {language}! 🌍 D'ora in poi risponderò in questa lingua.",
+
+  "languageSelectorTitle": "Seleziona Lingua",
+
+  "languageSelectorPrompt": "Ecco le lingue disponibili. Seleziona quella che preferisci:",
+
+  "onboardingLanguagePrompt": "Benvenuto! 🌍 Prima di iniziare, seleziona la tua lingua preferita:",
+
+  "onboardingLanguageTip": "💡 **Suggerimento:** Puoi cambiare la lingua in qualsiasi momento chiedendo 'quali lingue sono disponibili?' o dicendo 'cambia in [lingua]'."
+}

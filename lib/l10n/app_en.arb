@@ -1,0 +1,270 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "FEEDLOG",
+  "@appTitle": {"description": "The title of the application"},
+
+  "confirmButton": "Confirm",
+  "@confirmButton": {"description": "Generic confirm button text"},
+
+  "loadingText": "Loading...",
+  "@loadingText": {"description": "Generic loading text"},
+
+  "onboardingWelcomeMessage": "Hello! 👋 Welcome to FEEDLOG! I'm your AI-powered nutrition assistant, and I'm excited to help you achieve your health goals!\n\nLet's complete your profile so I can provide you with the best possible support.|||What would you like to be called?",
+  "@onboardingWelcomeMessage": {"description": "Welcome message during onboarding"},
+
+  "onboardingNameConfirmation": "Nice to meet you, {name}! 😊 Now I need to know your biological sex to accurately calculate your nutritional profile.",
+  "@onboardingNameConfirmation": {"description": "Confirmation after user provides name", "placeholders": {"name": {"type": "String"}}},
+
+  "onboardingGenderPrompt": "Perfect, {name}! 😊 To calculate your nutritional profile accurately, I need to know your biological sex. WIDGET:gender_selector",
+  "@onboardingGenderPrompt": {"description": "Prompt for gender selection", "placeholders": {"name": {"type": "String"}}},
+
+  "onboardingAgePrompt": "Great! Now tell me: how old are you?",
+  "@onboardingAgePrompt": {"description": "Prompt for age input"},
+
+  "onboardingHeightPrompt": "Perfect! And what's your height? (you can use meters or centimeters)",
+  "@onboardingHeightPrompt": {"description": "Prompt for height input"},
+
+  "onboardingWeightPrompt": "Got it! Now tell me: what's your current weight?",
+  "@onboardingWeightPrompt": {"description": "Prompt for weight input"},
+
+  "onboardingTargetWeightPrompt": "Noted! And what's your target weight? (the weight you want to reach)",
+  "@onboardingTargetWeightPrompt": {"description": "Prompt for target weight input"},
+
+  "onboardingActivityPrompt": "To calculate your calorie expenditure, I need to know: what's your daily physical activity level?\n\nWIDGET:activity_selector",
+  "@onboardingActivityPrompt": {"description": "Prompt for activity level selection"},
+
+  "onboardingGoalPrompt": "Great! Last question: what's your main goal?\n\nWIDGET:goal_selector",
+  "@onboardingGoalPrompt": {"description": "Prompt for goal selection"},
+
+  "onboardingResultsMessage": "🎉 Profile complete, {name}!\n\nI've calculated your nutritional profile:\n• TDEE: {tdee} kcal/day\n• Daily target: {dailyCalories} kcal\n• Protein: {protein}g\n• Carbohydrates: {carbs}g\n• Fat: {fat}g\n\nNow let me show you how to use FEEDLOG!",
+  "@onboardingResultsMessage": {"description": "Results after completing onboarding", "placeholders": {"name": {"type": "String"}, "tdee": {"type": "int"}, "dailyCalories": {"type": "int"}, "protein": {"type": "int"}, "carbs": {"type": "int"}, "fat": {"type": "int"}}},
+
+  "onboardingTutorialMessage": "📱 How FEEDLOG works:\n\n1️⃣ **Log meals**: Just tell me what you ate! Example: 'I ate 2 eggs and a banana'\n\n2️⃣ **Track your progress**: Ask 'How many calories did I eat today?' or 'How's my day going?'\n\n3️⃣ **Update weight**: Say 'I lost 1kg' or 'I'm at 80kg'\n\n4️⃣ **Check foods**: Ask 'How many calories are in an apple?'\n\nEverything works by chatting with me naturally! Ready to start? 🚀",
+  "@onboardingTutorialMessage": {"description": "Tutorial message at end of onboarding"},
+
+  "chatWelcomeBack": "Welcome back! What did you eat today?",
+  "@chatWelcomeBack": {"description": "Welcome back message for returning users"},
+
+  "chatNameError": "Sorry, I couldn't identify your name. Could you just type what you'd like to be called?",
+  "@chatNameError": {"description": "Error when name extraction fails"},
+
+  "chatAgeConfirmation": "{age} years old, noted! ✅",
+  "@chatAgeConfirmation": {"description": "Confirmation of age", "placeholders": {"age": {"type": "int"}}},
+
+  "chatAgeError": "Please enter a valid age (e.g., 30).",
+  "@chatAgeError": {"description": "Error for invalid age input"},
+
+  "chatHeightConfirmation": "{height}m tall, great! ✅",
+  "@chatHeightConfirmation": {"description": "Confirmation of height", "placeholders": {"height": {"type": "String"}}},
+
+  "chatHeightError": "I didn't understand the height. Try something like '1.75' or '175cm'.",
+  "@chatHeightError": {"description": "Error for invalid height input"},
+
+  "chatWeightConfirmation": "{weight}kg registered! ✅",
+  "@chatWeightConfirmation": {"description": "Confirmation of weight", "placeholders": {"weight": {"type": "double"}}},
+
+  "chatWeightError": "I didn't understand the weight. Try something like '80kg'.",
+  "@chatWeightError": {"description": "Error for invalid weight input"},
+
+  "chatTargetWeightConfirmation": "Target of {weight}kg set! 💪",
+  "@chatTargetWeightConfirmation": {"description": "Confirmation of target weight", "placeholders": {"weight": {"type": "double"}}},
+
+  "chatTargetWeightError": "What's your target weight? E.g., '70kg'.",
+  "@chatTargetWeightError": {"description": "Error for invalid target weight input"},
+
+  "chatSelectOptionAbove": "Please select an option above.",
+  "@chatSelectOptionAbove": {"description": "Prompt to select from widget options"},
+
+  "chatGenderConfirmation": "Noted! ✅",
+  "@chatGenderConfirmation": {"description": "Confirmation after gender selection"},
+
+  "chatActivityConfirmation": "Perfect! 💪",
+  "@chatActivityConfirmation": {"description": "Confirmation after activity selection"},
+
+  "chatLogoutConfirmation": "Got it! Logging out... See you later! 👋",
+  "@chatLogoutConfirmation": {"description": "Message when user logs out"},
+
+  "chatProcessingError": "Sorry, I had a problem processing your message. Please try again.",
+  "@chatProcessingError": {"description": "Generic processing error message"},
+
+  "chatImageAnalyzing": "Analyzing your image... 📸",
+  "@chatImageAnalyzing": {"description": "Message while analyzing image"},
+
+  "chatDailySummaryDefault": "Here's your daily summary:",
+  "@chatDailySummaryDefault": {"description": "Default message before daily summary widget"},
+
+  "chatInputPlaceholder": "Type your message...",
+  "@chatInputPlaceholder": {"description": "Placeholder text for chat input"},
+
+  "loginTagline": "Your AI-powered nutrition assistant",
+  "@loginTagline": {"description": "Tagline on login screen"},
+
+  "loginEmailPlaceholder": "Email",
+  "@loginEmailPlaceholder": {"description": "Email field placeholder"},
+
+  "loginPasswordPlaceholder": "Password",
+  "@loginPasswordPlaceholder": {"description": "Password field placeholder"},
+
+  "loginEmailRequired": "Please enter your email",
+  "@loginEmailRequired": {"description": "Error when email is empty"},
+
+  "loginEmailInvalid": "Invalid email",
+  "@loginEmailInvalid": {"description": "Error when email format is invalid"},
+
+  "loginPasswordRequired": "Please enter your password",
+  "@loginPasswordRequired": {"description": "Error when password is empty"},
+
+  "loginPasswordLengthError": "Password must be at least 6 characters",
+  "@loginPasswordLengthError": {"description": "Error when password is too short"},
+
+  "loginButton": "Sign In",
+  "@loginButton": {"description": "Login button text"},
+
+  "loginSignupLink": "Don't have an account? Sign up",
+  "@loginSignupLink": {"description": "Link to signup page"},
+
+  "signupTitle": "Create Account",
+  "@signupTitle": {"description": "Title on signup screen"},
+
+  "signupSubtitle": "Join FEEDLOG",
+  "@signupSubtitle": {"description": "Subtitle on signup screen"},
+
+  "signupConfirmPasswordPlaceholder": "Confirm Password",
+  "@signupConfirmPasswordPlaceholder": {"description": "Confirm password field placeholder"},
+
+  "signupConfirmPasswordRequired": "Please confirm your password",
+  "@signupConfirmPasswordRequired": {"description": "Error when confirm password is empty"},
+
+  "signupPasswordsMismatch": "Passwords don't match",
+  "@signupPasswordsMismatch": {"description": "Error when passwords don't match"},
+
+  "signupTermsAcceptance": "I accept the terms of use and privacy policy",
+  "@signupTermsAcceptance": {"description": "Terms acceptance checkbox text"},
+
+  "signupTermsRequired": "You must accept the terms to continue",
+  "@signupTermsRequired": {"description": "Error when terms not accepted"},
+
+  "signupButton": "Create Account",
+  "@signupButton": {"description": "Signup button text"},
+
+  "signupLoginLink": "Already have an account? Sign in",
+  "@signupLoginLink": {"description": "Link to login page"},
+
+  "loadingVerification": "Verifying login...",
+  "@loadingVerification": {"description": "Loading screen verification text"},
+
+  "genderSelectorTitle": "Select Your Biological Sex",
+  "@genderSelectorTitle": {"description": "Title for gender selector widget"},
+
+  "genderMale": "Male",
+  "@genderMale": {"description": "Male gender option"},
+
+  "genderFemale": "Female",
+  "@genderFemale": {"description": "Female gender option"},
+
+  "activitySelectorTitle": "Physical Activity Level",
+  "@activitySelectorTitle": {"description": "Title for activity selector widget"},
+
+  "activitySedentary": "Sedentary",
+  "@activitySedentary": {"description": "Sedentary activity level"},
+
+  "activitySedentaryDesc": "Little or no exercise",
+  "@activitySedentaryDesc": {"description": "Description for sedentary level"},
+
+  "activityLight": "Light",
+  "@activityLight": {"description": "Light activity level"},
+
+  "activityLightDesc": "Light exercise 1-3 days/week",
+  "@activityLightDesc": {"description": "Description for light activity level"},
+
+  "activityModerate": "Moderate",
+  "@activityModerate": {"description": "Moderate activity level"},
+
+  "activityModerateDesc": "Moderate exercise 3-5 days/week",
+  "@activityModerateDesc": {"description": "Description for moderate activity level"},
+
+  "activityHeavy": "Heavy",
+  "@activityHeavy": {"description": "Heavy activity level"},
+
+  "activityHeavyDesc": "Intense exercise 6-7 days/week",
+  "@activityHeavyDesc": {"description": "Description for heavy activity level"},
+
+  "activityAthlete": "Athlete",
+  "@activityAthlete": {"description": "Athlete activity level"},
+
+  "activityAthleteDesc": "Very intense exercise, physical work",
+  "@activityAthleteDesc": {"description": "Description for athlete activity level"},
+
+  "goalSelectorTitle": "Your Main Goal",
+  "@goalSelectorTitle": {"description": "Title for goal selector widget"},
+
+  "goalLose": "Lose Weight",
+  "@goalLose": {"description": "Weight loss goal"},
+
+  "goalLoseDesc": "Caloric deficit of 500 kcal/day",
+  "@goalLoseDesc": {"description": "Description for weight loss goal"},
+
+  "goalMaintain": "Maintain Weight",
+  "@goalMaintain": {"description": "Weight maintenance goal"},
+
+  "goalMaintainDesc": "Maintenance diet",
+  "@goalMaintainDesc": {"description": "Description for weight maintenance goal"},
+
+  "goalGain": "Build Muscle",
+  "@goalGain": {"description": "Muscle building goal"},
+
+  "goalGainDesc": "Caloric surplus of 300 kcal/day",
+  "@goalGainDesc": {"description": "Description for muscle building goal"},
+
+  "dailySummaryTitle": "Daily Summary",
+  "@dailySummaryTitle": {"description": "Title for daily summary widget"},
+
+  "dailySummaryCalories": "Calories",
+  "@dailySummaryCalories": {"description": "Calories label"},
+
+  "dailySummaryProtein": "Protein",
+  "@dailySummaryProtein": {"description": "Protein label"},
+
+  "dailySummaryCarbs": "Carbs",
+  "@dailySummaryCarbs": {"description": "Carbohydrates label"},
+
+  "dailySummaryFat": "Fat",
+  "@dailySummaryFat": {"description": "Fat label"},
+
+  "dailySummaryLeft": "Left",
+  "@dailySummaryLeft": {"description": "Remaining amount label"},
+
+  "dailySummaryKcal": "kcal",
+  "@dailySummaryKcal": {"description": "Kilocalories unit"},
+
+  "languageNotAvailable": "This language is not yet available in FEEDLOG.",
+  "@languageNotAvailable": {"description": "Message when requested language is not supported"},
+
+  "languageAvailableOptions": "Available languages",
+  "@languageAvailableOptions": {"description": "Label for available languages list"},
+
+  "languageChangePrompt": "Would you like to choose a different language?",
+  "@languageChangePrompt": {"description": "Prompt asking if user wants to select another language"},
+
+  "languageChangeConfirm": "Language changed successfully! 🌍",
+  "@languageChangeConfirm": {"description": "Confirmation when language is changed"},
+
+  "languageNotSupported": "This language is not available. Available languages: {languages}",
+  "@languageNotSupported": {"description": "Message when requested language is not supported with list", "placeholders": {"languages": {"type": "String"}}},
+
+  "languageChanged": "Language changed to {language}! 🌍 From now on I'll respond in this language.",
+  "@languageChanged": {"description": "Confirmation when language is changed", "placeholders": {"language": {"type": "String"}}},
+
+  "languageSelectorTitle": "Select Language",
+  "@languageSelectorTitle": {"description": "Title for language selector widget"},
+
+  "languageSelectorPrompt": "Here are the available languages. Select the one you prefer:",
+  "@languageSelectorPrompt": {"description": "Prompt message before showing language selector"},
+
+  "onboardingLanguagePrompt": "Welcome! 🌍 Before we begin, please select your preferred language:",
+  "@onboardingLanguagePrompt": {"description": "Prompt for language selection at first access"},
+
+  "onboardingLanguageTip": "💡 **Tip:** You can change the language anytime by asking 'which languages are available?' or saying 'change to [language]'.",
+  "@onboardingLanguageTip": {"description": "Tip about changing language after initial selection"}
+}
