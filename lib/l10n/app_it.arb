@@ -175,5 +175,16 @@
 
   "onboardingLanguagePrompt": "Benvenuto! 🌍 Prima di iniziare, seleziona la tua lingua preferita:",
 
-  "onboardingLanguageTip": "💡 **Suggerimento:** Puoi cambiare la lingua in qualsiasi momento chiedendo 'quali lingue sono disponibili?' o dicendo 'cambia in [lingua]'."
+  "onboardingLanguageTip": "💡 **Suggerimento:** Puoi cambiare la lingua in qualsiasi momento chiedendo 'quali lingue sono disponibili?' o dicendo 'cambia in [lingua]'.",
+
+  "profilePhotoTitle": "Foto Profilo",
+  "profilePhotoRealTab": "Foto Reale",
+  "profilePhotoAvatarTab": "Avatar",
+  "profilePhotoCamera": "Fotocamera",
+  "profilePhotoGallery": "Galleria",
+  "profilePhotoHint": "Scegli una foto o seleziona un avatar qui sotto",
+  "profilePhotoPrompt": "Ora personalizziamo il tuo profilo! 📸 Puoi caricare una foto reale o scegliere uno dei nostri divertenti avatar:",
+  "profilePhotoConfirmation": "Ottima scelta! Il tuo profilo sta benissimo! 😊",
+  "profilePhotoTip": "💡 **Suggerimento:** Puoi cambiare la tua foto in qualsiasi momento dicendo 'cambia la mia foto' o 'cambia il mio avatar'.",
+  "profilePhotoChangeRequest": "Certo! Lasciami mostrarti le opzioni per aggiornare la tua foto profilo:"
 }

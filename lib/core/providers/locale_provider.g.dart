@@ -115,3 +115,57 @@ final class L10nProvider
 }
 
 String _$l10nHash() => r'd7fd48e306ba4ca3a760673dc3cfd9e68db487ac';
+
+@ProviderFor(UserProfilePhotoNotifier)
+const userProfilePhotoProvider = UserProfilePhotoNotifierProvider._();
+
+final class UserProfilePhotoNotifierProvider
+    extends $NotifierProvider<UserProfilePhotoNotifier, UserProfilePhoto> {
+  const UserProfilePhotoNotifierProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'userProfilePhotoProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$userProfilePhotoNotifierHash();
+
+  @$internal
+  @override
+  UserProfilePhotoNotifier create() => UserProfilePhotoNotifier();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(UserProfilePhoto value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<UserProfilePhoto>(value),
+    );
+  }
+}
+
+String _$userProfilePhotoNotifierHash() =>
+    r'c79d5f38da61b7f2f6e329dd12102a033db548c5';
+
+abstract class _$UserProfilePhotoNotifier extends $Notifier<UserProfilePhoto> {
+  UserProfilePhoto build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build();
+    final ref = this.ref as $Ref<UserProfilePhoto, UserProfilePhoto>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<UserProfilePhoto, UserProfilePhoto>,
+              UserProfilePhoto,
+              Object?,
+              Object?
+            >;
+    element.handleValue(ref, created);
+  }
+}

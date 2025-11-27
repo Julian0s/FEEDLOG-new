@@ -175,5 +175,16 @@
 
   "onboardingLanguagePrompt": "欢迎！🌍 在开始之前，请选择您偏好的语言：",
 
-  "onboardingLanguageTip": "💡 **提示：** 您可以随时通过询问'有哪些语言可用？'或说'切换到[语言]'来更改语言。"
+  "onboardingLanguageTip": "💡 **提示：** 您可以随时通过询问'有哪些语言可用？'或说'切换到[语言]'来更改语言。",
+
+  "profilePhotoTitle": "头像",
+  "profilePhotoRealTab": "真实照片",
+  "profilePhotoAvatarTab": "虚拟形象",
+  "profilePhotoCamera": "相机",
+  "profilePhotoGallery": "相册",
+  "profilePhotoHint": "选择照片或在下方选择头像",
+  "profilePhotoPrompt": "现在让我们个性化您的资料！📸 您可以上传真实照片或选择我们有趣的虚拟形象：",
+  "profilePhotoConfirmation": "很棒的选择！您的资料看起来很不错！😊",
+  "profilePhotoTip": "💡 **提示：** 您可以随时通过说'更换我的照片'或'更换我的头像'来更改照片。",
+  "profilePhotoChangeRequest": "好的！让我向您展示更新头像的选项："
 }

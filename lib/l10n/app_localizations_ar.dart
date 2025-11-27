@@ -314,4 +314,47 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get onboardingLanguageTip =>
       '💡 **نصيحة:** يمكنك تغيير اللغة في أي وقت بسؤال \'ما هي اللغات المتاحة؟\' أو قول \'غيّر إلى [اللغة]\'.';
+
+  @override
+  String get profilePhotoTitle => 'صورة الملف الشخصي';
+
+  @override
+  String get profilePhotoRealTab => 'صورة حقيقية';
+
+  @override
+  String get profilePhotoAvatarTab => 'أفاتار';
+
+  @override
+  String get profilePhotoCamera => 'الكاميرا';
+
+  @override
+  String get profilePhotoGallery => 'المعرض';
+
+  @override
+  String get profilePhotoHint => 'اختر صورة أو حدد أفاتار أدناه';
+
+  @override
+  String get profilePhotoPrompt =>
+      'الآن لنخصص ملفك الشخصي! 📸 يمكنك تحميل صورة حقيقية أو اختيار أحد الأفاتارات المرحة:';
+
+  @override
+  String get profilePhotoConfirmation =>
+      'اختيار رائع! ملفك الشخصي يبدو جميلاً! 😊';
+
+  @override
+  String get profilePhotoTip =>
+      '💡 **نصيحة:** يمكنك تغيير صورتك في أي وقت بقول \'غيّر صورتي\' أو \'غيّر الأفاتار\'.';
+
+  @override
+  String get profilePhotoChangeRequest =>
+      'بالتأكيد! دعني أعرض لك خيارات تحديث صورة الملف الشخصي:';
+
+  @override
+  String get reloadAvatars => 'New avatars';
+
+  @override
+  String get recentAvatars => 'Recent avatars';
+
+  @override
+  String get closeButton => 'Close';
 }

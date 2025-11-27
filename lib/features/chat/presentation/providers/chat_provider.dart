@@ -40,6 +40,9 @@ class ChatNotifier extends _$ChatNotifier {
       // Load user's preferred language from Firestore
       await ref.read(localeProvider.notifier).loadFromFirestore(user.uid);
 
+      // Load user's profile photo
+      await ref.read(userProfilePhotoProvider.notifier).loadFromFirestore(user.uid);
+
       if (userData == null || userData['onboardingCompleted'] != true) {
         _startOnboarding(userData);
       } else {
@@ -104,7 +107,18 @@ class ChatNotifier extends _$ChatNotifier {
     final onboardingService = ref.read(onboardingServiceProvider);
     final prompt = onboardingService.getPromptForStep(_currentStep, userData: _tempUserData);
 
-    _addAiMessage(prompt);
+    // Process WIDGET markers in the prompt
+    if (prompt.contains('WIDGET:profile_photo_selector')) {
+      // Remove the marker and add the message
+      final cleanPrompt = prompt.replaceAll('WIDGET:profile_photo_selector', '').trim();
+      await _addAiMessage(cleanPrompt);
+
+      // Add the widget with correct gender
+      final isMale = _tempUserData['gender'] == Gender.male;
+      _addWidgetMessage('profile_photo_selector', {'isMale': isMale});
+    } else {
+      _addAiMessage(prompt);
+    }
   }
 
   void sendMessage(String text) async {
@@ -136,11 +150,67 @@ class ChatNotifier extends _$ChatNotifier {
       return;
     }
 
+    // Check for photo change request
+    if (_detectPhotoChangeRequest(text)) {
+      await _handlePhotoChangeRequest();
+      return;
+    }
+
     if (_isOnboarding) {
       await _handleOnboardingMessage(text);
     } else {
       await _handleNormalMessage(text);
     }
+  }
+
+  /// Detect if user wants to change their profile photo
+  bool _detectPhotoChangeRequest(String text) {
+    final lower = text.toLowerCase().trim();
+
+    final patterns = [
+      // Portuguese
+      'trocar minha foto', 'mudar minha foto', 'alterar minha foto',
+      'trocar foto', 'mudar foto', 'alterar foto',
+      'trocar meu avatar', 'mudar meu avatar', 'alterar meu avatar',
+      'trocar avatar', 'mudar avatar', 'alterar avatar',
+      'quero outra foto', 'quero outro avatar',
+      'atualizar foto', 'atualizar avatar',
+      // English
+      'change my photo', 'change my picture', 'change my avatar',
+      'update my photo', 'update my picture', 'update my avatar',
+      'new photo', 'new avatar', 'new picture',
+      'switch my photo', 'switch my avatar',
+      // Spanish
+      'cambiar mi foto', 'cambiar mi avatar', 'cambiar foto',
+      // French
+      'changer ma photo', 'changer mon avatar',
+      // German
+      'mein foto ändern', 'mein avatar ändern',
+    ];
+
+    for (final pattern in patterns) {
+      if (lower.contains(pattern)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  Future<void> _handlePhotoChangeRequest() async {
+    final user = ref.read(currentUserProvider);
+    if (user == null) return;
+
+    final firestoreService = ref.read(firestoreUserServiceProvider);
+
+    // Get user's gender to show correct avatars
+    final profile = await firestoreService.getUserProfile(user.uid);
+    final isMale = profile?.gender == Gender.male;
+
+    await _addAiMessage(_l10n.profilePhotoChangeRequest);
+    _addWidgetMessage('profile_photo_selector', {
+      'isMale': isMale,
+    });
   }
 
   bool _isLogoutCommand(String text) {
@@ -414,6 +484,10 @@ Response:''';
         // Handled by widget, users shouldn't type here
         await _addAiMessage(_l10n.chatSelectOptionAbove);
         return;
+      case 'profile_photo':
+        // Handled by widget, users shouldn't type here
+        await _addAiMessage(_l10n.chatSelectOptionAbove);
+        return;
       case 'age':
         final age = onboardingService.extractAge(text);
         if (age != null) {
@@ -513,11 +587,13 @@ Response:''';
     final onboardingService = ref.read(onboardingServiceProvider);
 
     if (widgetType == 'gender_selector') {
+      print('DEBUG handleWidgetAction: gender_selector received, value=$value');
       _tempUserData['gender'] = value; // Gender enum
       await _addAiMessage(_l10n.chatGenderConfirmation);
-      _currentStep = 'age';
+      _currentStep = 'profile_photo';
+      print('DEBUG handleWidgetAction: currentStep set to $_currentStep');
       await firestoreService.updateOnboardingStep(user.uid, _currentStep);
-      
+
       // Save partial profile
       final profile = UserProfile(
         name: _tempUserData['name'],
@@ -527,10 +603,60 @@ Response:''';
         updatedAt: DateTime.now(),
       );
       await firestoreService.saveUserProfile(user.uid, profile);
-      
+
+      // Show profile photo selector
       final prompt = onboardingService.getPromptForStep(_currentStep, userData: _tempUserData);
-      await _addAiMessage(prompt);
-      
+      print('DEBUG handleWidgetAction: prompt for profile_photo = $prompt');
+      await _addAiMessage(prompt.replaceAll('WIDGET:profile_photo_selector', '').trim());
+      print('DEBUG handleWidgetAction: adding profile_photo_selector widget, isMale=${_tempUserData['gender'] == Gender.male}');
+      _addWidgetMessage('profile_photo_selector', {
+        'isMale': _tempUserData['gender'] == Gender.male,
+      });
+      print('DEBUG handleWidgetAction: widget added');
+
+    } else if (widgetType == 'profile_photo_selector') {
+      final photoData = value as Map<String, dynamic>;
+
+      // Save profile photo
+      if (photoData['type'] == 'avatar') {
+        await firestoreService.saveProfilePhoto(
+          user.uid,
+          avatarId: photoData['avatarId'],
+          avatarUrl: photoData['avatarUrl'],
+        );
+        _tempUserData['avatarId'] = photoData['avatarId'];
+        _tempUserData['avatarUrl'] = photoData['avatarUrl'];
+        // Update local provider
+        ref.read(userProfilePhotoProvider.notifier).updatePhoto(
+          avatarId: photoData['avatarId'],
+          avatarUrl: photoData['avatarUrl'],
+        );
+      } else {
+        // For real photos, we'd need to upload to storage first
+        // For now, just save the local path (TODO: implement Firebase Storage upload)
+        await firestoreService.saveProfilePhoto(
+          user.uid,
+          photoUrl: photoData['photoPath'],
+        );
+        _tempUserData['photoUrl'] = photoData['photoPath'];
+        // Update local provider
+        ref.read(userProfilePhotoProvider.notifier).updatePhoto(
+          photoUrl: photoData['photoPath'],
+        );
+      }
+
+      await _addAiMessage(_l10n.profilePhotoConfirmation);
+
+      // Only show tip if onboarding (not changing photo later)
+      if (_isOnboarding) {
+        await _addAiMessage(_l10n.profilePhotoTip);
+        // Continue to age step
+        _currentStep = 'age';
+        await firestoreService.updateOnboardingStep(user.uid, _currentStep);
+        final prompt = onboardingService.getPromptForStep(_currentStep, userData: _tempUserData);
+        await _addAiMessage(prompt);
+      }
+
     } else if (widgetType == 'activity_selector') {
       _tempUserData['activityLevel'] = value; // ActivityLevel enum
       await _addAiMessage(_l10n.chatActivityConfirmation);

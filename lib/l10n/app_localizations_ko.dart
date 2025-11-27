@@ -306,4 +306,46 @@ class AppLocalizationsKo extends AppLocalizations {
   @override
   String get onboardingLanguageTip =>
       '💡 **팁:** \'어떤 언어를 사용할 수 있나요?\'라고 묻거나 \'[언어]로 변경해 줘\'라고 말하면 언제든지 언어를 변경할 수 있습니다.';
+
+  @override
+  String get profilePhotoTitle => '프로필 사진';
+
+  @override
+  String get profilePhotoRealTab => '실제 사진';
+
+  @override
+  String get profilePhotoAvatarTab => '아바타';
+
+  @override
+  String get profilePhotoCamera => '카메라';
+
+  @override
+  String get profilePhotoGallery => '갤러리';
+
+  @override
+  String get profilePhotoHint => '사진을 선택하거나 아래에서 아바타를 선택하세요';
+
+  @override
+  String get profilePhotoPrompt =>
+      '이제 프로필을 꾸며볼까요! 📸 실제 사진을 업로드하거나 재미있는 아바타를 선택할 수 있어요:';
+
+  @override
+  String get profilePhotoConfirmation => '멋진 선택이에요! 프로필이 아주 좋아 보여요! 😊';
+
+  @override
+  String get profilePhotoTip =>
+      '💡 **팁:** \'내 사진 바꿔 줘\' 또는 \'내 아바타 바꿔 줘\'라고 말하면 언제든지 사진을 바꿀 수 있어요.';
+
+  @override
+  String get profilePhotoChangeRequest =>
+      '물론이죠! 프로필 사진을 업데이트할 수 있는 옵션을 보여드릴게요:';
+
+  @override
+  String get reloadAvatars => 'New avatars';
+
+  @override
+  String get recentAvatars => 'Recent avatars';
+
+  @override
+  String get closeButton => 'Close';
 }

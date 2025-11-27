@@ -175,5 +175,16 @@
 
   "onboardingLanguagePrompt": "ようこそ！🌍 始める前に、お好みの言語を選択してください：",
 
-  "onboardingLanguageTip": "💡 **ヒント：** 「どの言語が使えますか？」と聞くか、「[言語]に変更して」と言うことで、いつでも言語を変更できます。"
+  "onboardingLanguageTip": "💡 **ヒント：** 「どの言語が使えますか？」と聞くか、「[言語]に変更して」と言うことで、いつでも言語を変更できます。",
+
+  "profilePhotoTitle": "プロフィール写真",
+  "profilePhotoRealTab": "本物の写真",
+  "profilePhotoAvatarTab": "アバター",
+  "profilePhotoCamera": "カメラ",
+  "profilePhotoGallery": "ギャラリー",
+  "profilePhotoHint": "写真を選ぶか、下からアバターを選んでください",
+  "profilePhotoPrompt": "さあ、プロフィールをカスタマイズしましょう！📸 本物の写真をアップロードするか、楽しいアバターを選んでください：",
+  "profilePhotoConfirmation": "素晴らしい選択です！プロフィールがとても良く見えます！😊",
+  "profilePhotoTip": "💡 **ヒント：** 「写真を変更して」や「アバターを変更して」と言えば、いつでも写真を変更できます。",
+  "profilePhotoChangeRequest": "もちろん！プロフィール写真を更新するオプションをお見せします："
 }

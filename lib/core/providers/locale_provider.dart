@@ -87,3 +87,62 @@ AppLocalizations l10n(Ref ref) {
   final locale = ref.watch(localeProvider);
   return lookupAppLocalizations(locale);
 }
+
+/// Model for user profile photo data
+class UserProfilePhoto {
+  final String? avatarId;
+  final String? avatarUrl;
+  final String? photoUrl;
+  final String type; // 'avatar' or 'photo'
+
+  const UserProfilePhoto({
+    this.avatarId,
+    this.avatarUrl,
+    this.photoUrl,
+    required this.type,
+  });
+
+  factory UserProfilePhoto.fromMap(Map<String, dynamic> map) {
+    return UserProfilePhoto(
+      avatarId: map['avatarId'],
+      avatarUrl: map['avatarUrl'],
+      photoUrl: map['photoUrl'],
+      type: map['type'] ?? 'avatar',
+    );
+  }
+
+  static const empty = UserProfilePhoto(type: 'none');
+}
+
+@riverpod
+class UserProfilePhotoNotifier extends _$UserProfilePhotoNotifier {
+  @override
+  UserProfilePhoto build() {
+    return UserProfilePhoto.empty;
+  }
+
+  /// Load profile photo from Firestore
+  Future<void> loadFromFirestore(String userId) async {
+    final firestoreService = ref.read(firestoreUserServiceProvider);
+    final photoData = await firestoreService.getProfilePhoto(userId);
+    if (photoData != null) {
+      state = UserProfilePhoto.fromMap(photoData);
+    }
+  }
+
+  /// Update profile photo locally (after saving to Firestore)
+  void updatePhoto({String? avatarId, String? avatarUrl, String? photoUrl}) {
+    if (avatarUrl != null) {
+      state = UserProfilePhoto(
+        avatarId: avatarId,
+        avatarUrl: avatarUrl,
+        type: 'avatar',
+      );
+    } else if (photoUrl != null) {
+      state = UserProfilePhoto(
+        photoUrl: photoUrl,
+        type: 'photo',
+      );
+    }
+  }
+}

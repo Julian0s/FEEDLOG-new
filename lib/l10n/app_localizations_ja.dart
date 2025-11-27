@@ -304,4 +304,45 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String get onboardingLanguageTip =>
       '💡 **ヒント：** 「どの言語が使えますか？」と聞くか、「[言語]に変更して」と言うことで、いつでも言語を変更できます。';
+
+  @override
+  String get profilePhotoTitle => 'プロフィール写真';
+
+  @override
+  String get profilePhotoRealTab => '本物の写真';
+
+  @override
+  String get profilePhotoAvatarTab => 'アバター';
+
+  @override
+  String get profilePhotoCamera => 'カメラ';
+
+  @override
+  String get profilePhotoGallery => 'ギャラリー';
+
+  @override
+  String get profilePhotoHint => '写真を選ぶか、下からアバターを選んでください';
+
+  @override
+  String get profilePhotoPrompt =>
+      'さあ、プロフィールをカスタマイズしましょう！📸 本物の写真をアップロードするか、楽しいアバターを選んでください：';
+
+  @override
+  String get profilePhotoConfirmation => '素晴らしい選択です！プロフィールがとても良く見えます！😊';
+
+  @override
+  String get profilePhotoTip =>
+      '💡 **ヒント：** 「写真を変更して」や「アバターを変更して」と言えば、いつでも写真を変更できます。';
+
+  @override
+  String get profilePhotoChangeRequest => 'もちろん！プロフィール写真を更新するオプションをお見せします：';
+
+  @override
+  String get reloadAvatars => 'New avatars';
+
+  @override
+  String get recentAvatars => 'Recent avatars';
+
+  @override
+  String get closeButton => 'Close';
 }

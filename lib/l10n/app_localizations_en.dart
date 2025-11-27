@@ -319,4 +319,47 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get onboardingLanguageTip =>
       '💡 **Tip:** You can change the language anytime by asking \'which languages are available?\' or saying \'change to [language]\'.';
+
+  @override
+  String get profilePhotoTitle => 'Profile Photo';
+
+  @override
+  String get profilePhotoRealTab => 'Real Photo';
+
+  @override
+  String get profilePhotoAvatarTab => 'Avatar';
+
+  @override
+  String get profilePhotoCamera => 'Camera';
+
+  @override
+  String get profilePhotoGallery => 'Gallery';
+
+  @override
+  String get profilePhotoHint => 'Choose a photo or select an avatar below';
+
+  @override
+  String get profilePhotoPrompt =>
+      'Now let\'s personalize your profile! 📸 You can upload a real photo or choose one of our fun avatars:';
+
+  @override
+  String get profilePhotoConfirmation =>
+      'Great choice! Your profile is looking good! 😊';
+
+  @override
+  String get profilePhotoTip =>
+      '💡 **Tip:** You can change your photo anytime by saying \'change my photo\' or \'change my avatar\'.';
+
+  @override
+  String get profilePhotoChangeRequest =>
+      'Sure! Let me show you the options to update your profile photo:';
+
+  @override
+  String get reloadAvatars => 'New avatars';
+
+  @override
+  String get recentAvatars => 'Recent avatars';
+
+  @override
+  String get closeButton => 'Close';
 }

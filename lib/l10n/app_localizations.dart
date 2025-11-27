@@ -658,6 +658,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'💡 **Tip:** You can change the language anytime by asking \'which languages are available?\' or saying \'change to [language]\'.'**
   String get onboardingLanguageTip;
+
+  /// Title for profile photo selector
+  ///
+  /// In en, this message translates to:
+  /// **'Profile Photo'**
+  String get profilePhotoTitle;
+
+  /// Tab for real photo option
+  ///
+  /// In en, this message translates to:
+  /// **'Real Photo'**
+  String get profilePhotoRealTab;
+
+  /// Tab for avatar option
+  ///
+  /// In en, this message translates to:
+  /// **'Avatar'**
+  String get profilePhotoAvatarTab;
+
+  /// Camera option label
+  ///
+  /// In en, this message translates to:
+  /// **'Camera'**
+  String get profilePhotoCamera;
+
+  /// Gallery option label
+  ///
+  /// In en, this message translates to:
+  /// **'Gallery'**
+  String get profilePhotoGallery;
+
+  /// Hint text for photo selection
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a photo or select an avatar below'**
+  String get profilePhotoHint;
+
+  /// Prompt for profile photo selection during onboarding
+  ///
+  /// In en, this message translates to:
+  /// **'Now let\'s personalize your profile! 📸 You can upload a real photo or choose one of our fun avatars:'**
+  String get profilePhotoPrompt;
+
+  /// Confirmation after photo/avatar selection
+  ///
+  /// In en, this message translates to:
+  /// **'Great choice! Your profile is looking good! 😊'**
+  String get profilePhotoConfirmation;
+
+  /// Tip about changing photo later
+  ///
+  /// In en, this message translates to:
+  /// **'💡 **Tip:** You can change your photo anytime by saying \'change my photo\' or \'change my avatar\'.'**
+  String get profilePhotoTip;
+
+  /// Response when user asks to change photo
+  ///
+  /// In en, this message translates to:
+  /// **'Sure! Let me show you the options to update your profile photo:'**
+  String get profilePhotoChangeRequest;
+
+  /// Button to reload/generate new avatars
+  ///
+  /// In en, this message translates to:
+  /// **'New avatars'**
+  String get reloadAvatars;
+
+  /// Title for recent avatars dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Recent avatars'**
+  String get recentAvatars;
+
+  /// Generic close button text
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get closeButton;
 }
 
 class _AppLocalizationsDelegate

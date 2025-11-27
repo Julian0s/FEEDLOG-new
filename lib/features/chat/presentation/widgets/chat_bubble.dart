@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:nutriai/core/theme/app_colors.dart';
 import 'package:nutriai/core/theme/app_text_styles.dart';
@@ -11,8 +12,15 @@ import 'package:nutriai/features/chat/presentation/widgets/typing_indicator.dart
 
 class ChatBubble extends StatelessWidget {
   final ChatMessage message;
+  final String? userAvatarUrl;
+  final String? userPhotoUrl;
 
-  const ChatBubble({super.key, required this.message});
+  const ChatBubble({
+    super.key,
+    required this.message,
+    this.userAvatarUrl,
+    this.userPhotoUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -114,6 +122,64 @@ class ChatBubble extends StatelessWidget {
   }
 
   Widget _buildUserAvatar() {
+    // Check if user has a profile photo or avatar
+    if (userAvatarUrl != null) {
+      return Container(
+        width: 32,
+        height: 32,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppColors.glassMedium,
+          border: Border.all(color: AppColors.neonMint.withOpacity(0.5)),
+        ),
+        child: ClipOval(
+          child: SvgPicture.network(
+            userAvatarUrl!,
+            fit: BoxFit.cover,
+            placeholderBuilder: (context) => const Center(
+              child: SizedBox(
+                width: 16,
+                height: 16,
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                  color: AppColors.neonMint,
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    if (userPhotoUrl != null) {
+      return Container(
+        width: 32,
+        height: 32,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppColors.glassMedium,
+          border: Border.all(color: AppColors.neonMint.withOpacity(0.5)),
+        ),
+        child: ClipOval(
+          child: kIsWeb
+              ? Image.network(
+                  userPhotoUrl!,
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, __, ___) => _buildDefaultAvatar(),
+                )
+              : Image.file(
+                  File(userPhotoUrl!),
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, __, ___) => _buildDefaultAvatar(),
+                ),
+        ),
+      );
+    }
+
+    return _buildDefaultAvatar();
+  }
+
+  Widget _buildDefaultAvatar() {
     return Container(
       width: 32,
       height: 32,

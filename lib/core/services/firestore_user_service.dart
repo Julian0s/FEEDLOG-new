@@ -155,10 +155,14 @@ abstract class FirestoreUserService {
   Future<void> updateLanguage(String userId, String languageCode);
   Future<String?> getLanguage(String userId);
   Future<void> markLanguageSelected(String userId);
+  Future<void> saveProfilePhoto(String userId, {String? avatarId, String? avatarUrl, String? photoUrl});
+  Future<Map<String, dynamic>?> getProfilePhoto(String userId);
   Future<UserProfile?> getUserProfile(String userId);
   Future<WeightTracking?> getWeightTracking(String userId);
   Future<UserGoals?> getUserGoals(String userId);
   Future<Map<String, dynamic>?> getUserData(String userId);
+  Future<void> addToAvatarHistory(String userId, String avatarUrl);
+  Future<List<String>> getAvatarHistory(String userId);
 }
 
 class FirestoreUserServiceImpl implements FirestoreUserService {
@@ -214,6 +218,26 @@ class FirestoreUserServiceImpl implements FirestoreUserService {
     await _firestore.collection('users').doc(userId).set({
       'languageSelected': true,
     }, SetOptions(merge: true));
+  }
+
+  @override
+  Future<void> saveProfilePhoto(String userId, {String? avatarId, String? avatarUrl, String? photoUrl}) async {
+    await _firestore.collection('users').doc(userId).set({
+      'profilePhoto': {
+        'type': photoUrl != null ? 'photo' : 'avatar',
+        if (avatarId != null) 'avatarId': avatarId,
+        if (avatarUrl != null) 'avatarUrl': avatarUrl,
+        if (photoUrl != null) 'photoUrl': photoUrl,
+        'updatedAt': FieldValue.serverTimestamp(),
+      },
+    }, SetOptions(merge: true));
+  }
+
+  @override
+  Future<Map<String, dynamic>?> getProfilePhoto(String userId) async {
+    final doc = await _firestore.collection('users').doc(userId).get();
+    if (!doc.exists) return null;
+    return doc.data()?['profilePhoto'] as Map<String, dynamic>?;
   }
 
   @override
@@ -278,6 +302,38 @@ class FirestoreUserServiceImpl implements FirestoreUserService {
   Future<Map<String, dynamic>?> getUserData(String userId) async {
     final doc = await _firestore.collection('users').doc(userId).get();
     return doc.data();
+  }
+
+  @override
+  Future<void> addToAvatarHistory(String userId, String avatarUrl) async {
+    final doc = await _firestore.collection('users').doc(userId).get();
+    List<Map<String, dynamic>> history =
+        List<Map<String, dynamic>>.from(doc.data()?['avatarHistory'] ?? []);
+
+    // Remove se já existe
+    history.removeWhere((a) => a['url'] == avatarUrl);
+
+    // Adiciona no início
+    history.insert(0, {
+      'url': avatarUrl,
+      'addedAt': DateTime.now().toIso8601String(),
+    });
+
+    // Mantém apenas 10
+    if (history.length > 10) {
+      history = history.sublist(0, 10);
+    }
+
+    await _firestore.collection('users').doc(userId).set({
+      'avatarHistory': history,
+    }, SetOptions(merge: true));
+  }
+
+  @override
+  Future<List<String>> getAvatarHistory(String userId) async {
+    final doc = await _firestore.collection('users').doc(userId).get();
+    final history = List<Map<String, dynamic>>.from(doc.data()?['avatarHistory'] ?? []);
+    return history.map((a) => a['url'] as String).toList();
   }
 }
 

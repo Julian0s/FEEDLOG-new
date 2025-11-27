@@ -266,5 +266,44 @@
   "@onboardingLanguagePrompt": {"description": "Prompt for language selection at first access"},
 
   "onboardingLanguageTip": "💡 **Tip:** You can change the language anytime by asking 'which languages are available?' or saying 'change to [language]'.",
-  "@onboardingLanguageTip": {"description": "Tip about changing language after initial selection"}
+  "@onboardingLanguageTip": {"description": "Tip about changing language after initial selection"},
+
+  "profilePhotoTitle": "Profile Photo",
+  "@profilePhotoTitle": {"description": "Title for profile photo selector"},
+
+  "profilePhotoRealTab": "Real Photo",
+  "@profilePhotoRealTab": {"description": "Tab for real photo option"},
+
+  "profilePhotoAvatarTab": "Avatar",
+  "@profilePhotoAvatarTab": {"description": "Tab for avatar option"},
+
+  "profilePhotoCamera": "Camera",
+  "@profilePhotoCamera": {"description": "Camera option label"},
+
+  "profilePhotoGallery": "Gallery",
+  "@profilePhotoGallery": {"description": "Gallery option label"},
+
+  "profilePhotoHint": "Choose a photo or select an avatar below",
+  "@profilePhotoHint": {"description": "Hint text for photo selection"},
+
+  "profilePhotoPrompt": "Now let's personalize your profile! 📸 You can upload a real photo or choose one of our fun avatars:",
+  "@profilePhotoPrompt": {"description": "Prompt for profile photo selection during onboarding"},
+
+  "profilePhotoConfirmation": "Great choice! Your profile is looking good! 😊",
+  "@profilePhotoConfirmation": {"description": "Confirmation after photo/avatar selection"},
+
+  "profilePhotoTip": "💡 **Tip:** You can change your photo anytime by saying 'change my photo' or 'change my avatar'.",
+  "@profilePhotoTip": {"description": "Tip about changing photo later"},
+
+  "profilePhotoChangeRequest": "Sure! Let me show you the options to update your profile photo:",
+  "@profilePhotoChangeRequest": {"description": "Response when user asks to change photo"},
+
+  "reloadAvatars": "New avatars",
+  "@reloadAvatars": {"description": "Button to reload/generate new avatars"},
+
+  "recentAvatars": "Recent avatars",
+  "@recentAvatars": {"description": "Title for recent avatars dialog"},
+
+  "closeButton": "Close",
+  "@closeButton": {"description": "Generic close button text"}
 }

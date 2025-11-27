@@ -4,6 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
 import 'package:nutriai/l10n/app_localizations.dart';
+import '../../../core/providers/locale_provider.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_text_styles.dart';
 import '../../../core/widgets/glass_container.dart';
@@ -15,6 +16,9 @@ import 'widgets/dynamic_content/activity_selector_widget.dart';
 import 'widgets/dynamic_content/goal_selector_widget.dart';
 import 'widgets/dynamic_content/gender_selector_widget.dart';
 import 'widgets/dynamic_content/language_selector_widget.dart';
+import 'widgets/dynamic_content/profile_photo_selector_widget.dart';
+import '../../../core/services/firestore_user_service.dart';
+import '../../auth/domain/auth_service.dart';
 
 class ChatScreen extends ConsumerStatefulWidget {
   const ChatScreen({super.key});
@@ -56,6 +60,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     final messages = ref.watch(chatProvider);
+    final userPhoto = ref.watch(userProfilePhotoProvider);
 
     // Auto-scroll on new messages
     ref.listen(chatProvider, (previous, next) {
@@ -102,7 +107,11 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                     if (message.type == MessageType.widget) {
                       return _buildWidgetMessage(message);
                     }
-                    return ChatBubble(message: message);
+                    return ChatBubble(
+                      message: message,
+                      userAvatarUrl: userPhoto.avatarUrl,
+                      userPhotoUrl: userPhoto.photoUrl,
+                    );
                   },
                 ),
               ),
@@ -148,6 +157,23 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           onConfirmed: (languageCode) {
             ref.read(chatProvider.notifier).handleWidgetAction('language_selector', languageCode);
           },
+        );
+        break;
+      case 'profile_photo_selector':
+        final isMale = message.metadata?['isMale'] ?? true;
+        final user = ref.read(currentUserProvider);
+        final firestoreService = ref.read(firestoreUserServiceProvider);
+        widgetContent = ProfilePhotoSelectorWidget(
+          isMale: isMale,
+          onConfirmed: (photoData) {
+            ref.read(chatProvider.notifier).handleWidgetAction('profile_photo_selector', photoData);
+          },
+          onLoadHistory: user != null
+              ? () => firestoreService.getAvatarHistory(user.uid)
+              : null,
+          onSaveToHistory: user != null
+              ? (avatarUrl) => firestoreService.addToAvatarHistory(user.uid, avatarUrl)
+              : null,
         );
         break;
     }

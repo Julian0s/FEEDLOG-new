@@ -304,4 +304,44 @@ class AppLocalizationsZh extends AppLocalizations {
   @override
   String get onboardingLanguageTip =>
       '💡 **提示：** 您可以随时通过询问\'有哪些语言可用？\'或说\'切换到[语言]\'来更改语言。';
+
+  @override
+  String get profilePhotoTitle => '头像';
+
+  @override
+  String get profilePhotoRealTab => '真实照片';
+
+  @override
+  String get profilePhotoAvatarTab => '虚拟形象';
+
+  @override
+  String get profilePhotoCamera => '相机';
+
+  @override
+  String get profilePhotoGallery => '相册';
+
+  @override
+  String get profilePhotoHint => '选择照片或在下方选择头像';
+
+  @override
+  String get profilePhotoPrompt => '现在让我们个性化您的资料！📸 您可以上传真实照片或选择我们有趣的虚拟形象：';
+
+  @override
+  String get profilePhotoConfirmation => '很棒的选择！您的资料看起来很不错！😊';
+
+  @override
+  String get profilePhotoTip =>
+      '💡 **提示：** 您可以随时通过说\'更换我的照片\'或\'更换我的头像\'来更改照片。';
+
+  @override
+  String get profilePhotoChangeRequest => '好的！让我向您展示更新头像的选项：';
+
+  @override
+  String get reloadAvatars => 'New avatars';
+
+  @override
+  String get recentAvatars => 'Recent avatars';
+
+  @override
+  String get closeButton => 'Close';
 }

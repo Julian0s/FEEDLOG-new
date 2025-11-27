@@ -190,6 +190,7 @@ class OnboardingService {
     'welcome',
     'name',
     'gender',
+    'profile_photo',
     'age',
     'height',
     'weight',
@@ -222,6 +223,9 @@ class OnboardingService {
       case 'gender':
         final name = userData?['name'] ?? '';
         return l10n.onboardingGenderPrompt(name);
+
+      case 'profile_photo':
+        return '${l10n.profilePhotoPrompt}\n\nWIDGET:profile_photo_selector';
 
       case 'age':
         return l10n.onboardingAgePrompt;
