@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Local firebase config
+.runtimeconfig.json
+
+# Environment files
+.env
+.env.local
